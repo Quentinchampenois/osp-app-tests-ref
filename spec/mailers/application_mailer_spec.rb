@@ -32,7 +32,7 @@ module Decidim
         let(:mail) { described_class.send_email(user, nil) }
 
         it "returns default values" do
-          expect(mail.from).to eq(["change-me@example.org"])
+          expect(mail.from).to eq(["ne-pas-repondre@opensourcepolitics.eu"])
           expect(mail.reply_to).to eq(nil)
         end
       end
@@ -41,7 +41,7 @@ module Decidim
         let(:smtp_settings) { nil }
 
         it "returns default values" do
-          expect(mail.from).to eq(["change-me@example.org"])
+          expect(mail.from).to eq(["ne-pas-repondre@opensourcepolitics.eu"])
           expect(mail.reply_to).to eq(nil)
         end
       end
@@ -50,8 +50,8 @@ module Decidim
         let(:from) { nil }
 
         it "set default values for mail.from and mail.reply_to" do
-          expect(mail.from).to eq(["change-me@example.org"])
-          expect(mail.reply_to).to eq(["change-me@example.org"])
+          expect(mail.from).to eq(["ne-pas-repondre@opensourcepolitics.eu"])
+          expect(mail.reply_to).to eq(["ne-pas-repondre@opensourcepolitics.eu"])
         end
       end
 
